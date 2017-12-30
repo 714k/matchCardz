@@ -8,13 +8,15 @@ import {
   Right,
   Button,
   Icon,
-  Body
+  Body,
+  StyleProvider
 } from "native-base";
 
 export default class HeaderApp extends React.Component {
   render() {
     return (
-      <Header>
+      <Header
+        style={{ backgroundColor: '#302D58'}}>
         <Left>
           <Button
             transparent

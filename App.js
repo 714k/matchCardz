@@ -7,17 +7,29 @@
 import React, { Component } from 'react';
 import {
   Platform,
-  StyleSheet,
   Text,
   View
 } from 'react-native';
 
+import {
+  Container,
+  StyleProvider
+} from "native-base";
+import getTheme from './native-base-theme/components';
+import material from './native-base-theme/variables/material';
+
+import HeaderApp from "./app/components/header/HeaderApp";
 import MainScreen from './app/screens/MainScreen/MainScreen';
 
 export default class App extends React.Component {
   render() {
     return (
-      <MainScreen />
+      <StyleProvider style={getTheme(material)}>
+        <Container>
+          <HeaderApp />
+          <MainScreen />
+        </Container>
+      </StyleProvider>
     );
   }
 }
