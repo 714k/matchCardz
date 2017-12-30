@@ -71,6 +71,12 @@ export default class MainScreen extends React.Component {
             primary>
             <Text>Enter as a Guest</Text>
           </Button>
+          <Button
+            style={styles.btn}
+            full
+            primary>
+            <Text>Register</Text>
+          </Button>
         </Form>
       </Content>
     );
