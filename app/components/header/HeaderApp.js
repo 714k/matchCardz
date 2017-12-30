@@ -12,6 +12,8 @@ import {
   StyleProvider
 } from "native-base";
 
+import styles from './styles';
+
 export default class HeaderApp extends React.Component {
   render() {
     return (
@@ -19,15 +21,32 @@ export default class HeaderApp extends React.Component {
         style={{ backgroundColor: '#302D58'}}>
         <Left>
           <Button
-            transparent
-            onPress={() => this.props.navigation.navigate('DrawerOpen')}>
-            <Icon name="menu" />
+            transparent>
+            <Icon 
+            style={styles.headerColor}
+            name='menu' />
           </Button>
         </Left>
         <Body>
-          <Title>matchCardz</Title>
+          <Title 
+            style={styles.headerColor}>
+            matchCardz
+          </Title>
         </Body>
-        <Right />
+        <Right>
+          <Button
+            transparent>
+            <Icon 
+            style={styles.headerColor}
+            name='share' />
+          </Button>
+          <Button
+            transparent>
+            <Icon 
+            style={styles.headerColor}
+            name='settings' />
+          </Button>
+        </Right>
       </Header>
     );
   }
