@@ -1,6 +1,6 @@
 /**
- * Sample React Native App
- * https://github.com/facebook/react-native
+ * matchCardz App
+ * https://github.com/VictorZamudio/matchCardz
  * @flow
  */
 
@@ -12,12 +12,12 @@ import {
   View
 } from 'react-native';
 
-import LoginScreen from './app/screens/LoginScreen';
+import MainScreen from './app/screens/MainScreen/MainScreen';
 
 export default class App extends React.Component {
   render() {
     return (
-      <LoginScreen />
+      <MainScreen />
     );
   }
 }
