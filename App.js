@@ -15,7 +15,7 @@ import {
 import { Provider } from 'react-redux';
 
 import store from "./app/store";
-import * as session from "./app/services/session";
+// import * as session from "./app/services/session";
 import * as routeHistoryActions from "./app/services/routeHistory/actions";
 
 import Main from './app/screens/';
@@ -45,12 +45,12 @@ const routeStack = [
   },
 ];
 
-class App extends Component {
+class App extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      initialRoute = null,
+      initialRoute: null,
     };
   }
 
@@ -65,6 +65,11 @@ class App extends Component {
   }
 
   autoLogin() {
+    this.setState({
+      // could be login error screen
+      initialRoute: routeStack[0]
+    })
+/*
     session.refreshToken()
     .then(() => {
       this.setState({
@@ -77,7 +82,8 @@ class App extends Component {
         initialRoute: routeStack[0]
       })
     })
-  }
+ /**/
+}
 
   renderContent() {
     if (!this.state.initialRoute) {

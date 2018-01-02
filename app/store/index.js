@@ -15,7 +15,7 @@ import createFilter from 'redux-persist-transform-filter';
 
 import { reducer as dataReducer } from "../data/reducer";
 import { reducer as servicesReducer } from "../services/reducer";
-import * as persitActionCreators from "../services/persist/action";
+import * as persitActionCreators from "../services/persist/actions";
 
 const appReducer = combineReducers({
   services: servicesReducer,
